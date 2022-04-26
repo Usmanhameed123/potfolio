@@ -16,7 +16,7 @@ body{
    
 }
 .navbar{
-    background-color:black;
+    background-color:black!important;
 }
 a{
     text-decoration: none;
