@@ -15,6 +15,9 @@ body{
     
    
 }
+.navbar{
+    background-color:black;
+}
 a{
     text-decoration: none;
 }
