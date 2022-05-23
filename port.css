@@ -15,9 +15,17 @@ body{
     
    
 }
-.navbar{
-    background-color:black!important;
-}
+.reveal2{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal2.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
 a{
     text-decoration: none;
 }
@@ -29,10 +37,8 @@ a{
 }
 .main-btn:hover{
     
-    font-size: larger;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: rgb(255, 0, 43);
-    color: rgb(0, 0, 0);
+    background: rgb(255 34 72 / 83%);
+    color: rgb(255 255 255);
     
 
 }
@@ -40,28 +46,37 @@ section
 {
     padding: 50px 0px;;
 }
-
+.fa-solid, .fas{
+    
+    color: white;
+}
 .main-btn
 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline-block;
-    border-radius:20px ;
+    border-radius: 20px;
     transition: all 0s ease-in-out;
-    padding: 8px 23px;
+    padding: 12px 23px;
     background: linear-gradient(#000000, rgb(19, 13, 9));
     font-size: large;
     font-weight: bold;
-    border: 2px solid grey;
+    border: 2px solid #2d0505;
     color: rgb(255, 255, 255);
     letter-spacing: 2px;
+    margin-left: 5px;
 } 
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 .banner_wrapper
 {
-    height: auto;
-    width: 100%;
-    min-width: 650px;
+   
     background: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 200px 0 100px 0;
@@ -176,17 +191,44 @@ padding: 10px;
     
   }
   .bn-1:hover{
-     
+     font-weight: bold;
     background-color: yellow;
-    font-size: 25px;
-    color: white!important;
+    font-size: 22px;
+    color: rgb(0, 0, 0)!important;
 }
   .bn-2:hover{
+     font-weight: bold;
       background-color: yellow;
-      font-size: 25px;
-      color: white!important;
+      font-size: 22px;
+      color: rgb(0, 0, 0)!important;
   }
-
+  @media(max-width:446px)
+  {
+      .bn-1:hover,.bn-2:hover{
+          padding: 15px 5px;
+          font-size: 10px;
+      }
+      .bn-2{
+        padding-top: 10px;
+    }
+     
+  }
+  @media(max-width:407px)
+  {
+      .bn-1,.bn-2
+      {
+          width: 200px;
+          font-size: 10px;
+      
+        }
+        .bn-2{
+            padding-top: 10px;
+        }
+    }
+.collapse
+{
+    margin-right: 80px;
+}
 h4{
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -194,8 +236,8 @@ h4{
 }
 h4:hover
 {
-    font-size: 22px;
-    color: red;
+    font-size: 26px;
+    color: rgb(255, 255, 255);
 }
 .tabs
 {
@@ -233,15 +275,54 @@ h4:hover
     animation: animated-text 2s steps(29,end) 1s 1 normal both,
     animated-cursor 600ms steps(29,end) infinite;
     text-decoration: underline;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip
+    
+    : text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+        
 }
 .lead{
     
+    margin-top: 90px;
     font-size: 18px;
     color: white;
     padding-left: 20px;
     padding-right: 10px;
+    bottom:15%;
+    position:relative;
+    
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 5s;
+}     
 
+  
+
+@-webkit-keyframes run {
+    0% { left: -30%;}
+    50%{ left : 1%;}
+    
 }
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
 h3{
     text-align: center;
     font-size: 50px;
@@ -271,6 +352,7 @@ h1{
     overflow: hidden; 
         animation: animated-text 4s steps(29,end) 1s 1 normal both,
                    animated-cursor 600ms steps(29,end) infinite;
+                  
 }
       
       /* text animation */
@@ -316,6 +398,12 @@ h2{
         font-size: 20px;
     }
 }
+@media(max-width:456px)
+{
+    .lead{
+        padding-top: 40px;
+    }
+}
 @media(max-width:767px)
 {
     .heading{
@@ -338,7 +426,7 @@ font-size: 25px;
 }
 .header-wrapper .navitem .nav-link
 {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .banner
 {
@@ -347,7 +435,7 @@ font-size: 25px;
 }
 .header-wrapper .navbar
 {
-padding: 20px 0;
+padding: 8px 0;
 transition:all 2s linear;
 }
 .nav-link {
